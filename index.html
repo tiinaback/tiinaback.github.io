@@ -6,37 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-   <!-- Link to external CSS file -->
-   <link rel="stylesheet" href="/Users/tiinabackman/bootsrap_teht2/node_modules/bootstrap/dist/css/style.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50"></body>>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
   <!--Nav bar-->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-sm fixed-top" style="background-color: rgb(66, 43, 77);">
     <div class="container-fluid" id="alku">
-      <a class="navbar-brand" href="#alku">Tiinan keittiössä</a>
+      <a class="navbar-brand" href="#alku" style="color:aliceblue">Tiinan keittiössä</a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Etusivu</a>
+            <a class="nav-link" href="#" style="color:aliceblue">Etusivu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#ravintola">Ravintola</a>
+            <a class="nav-link" href="#ravintola" style="color:aliceblue">Ravintola</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#menu" role="button" data-bs-toggle="dropdown">Menu</a>
+            <a class="nav-link dropdown-toggle" href="#menu" style="color:aliceblue" role="button" data-bs-toggle="dropdown">Menu</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Lounas</a></li>
-              <li><a class="dropdown-item" href="#">A la Carte</a></li>
-              <li><a class="dropdown-item" href="#">Juomat</a></li>
+              <li><a class="dropdown-item" href="#" style="color:aliceblue">Lounas</a></li>
+              <li><a class="dropdown-item" href="#" style="color:aliceblue">A la Carte</a></li>
+              <li><a class="dropdown-item" href="#" style="color:aliceblue">Juomat</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ota yhteyttä</a>
+            <a class="nav-link" href="#" style="color:aliceblue">Ota yhteyttä</a>
           </li>  
 
         </ul>
@@ -98,43 +96,47 @@
   </div>
 
   <!--Grid-->
-  <div class="container mt-5" id="ravintola" padding-top="70px">
+  <div class="container mt-5" id="ravintola" padding-top="70px" style="background-color:rgb(66, 43, 77); color:aliceblue">
   <div class="row">
     <div class="col-md-4"><img src="assets/nuudeli.png" alt="Nuudeli" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;" ></div>
-    <div class="col-md-4"><h3>Tiinan keittiössä</h3><p>Tämmönen rafla vaan</p><p>Auki:</p><p>su-to 10:30-20:00</p><p>pe-la 10:30-22:00</p></div>
+    <div class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center" ><h3>Tiinan keittiössä</h3><p>Tämmönen rafla vaan</p><p>Auki:</p><p>su-to 10:30-20:00</p><p>pe-la 10:30-22:00</p></div>
     <div class="col-md-4"><img src="assets/ragu1.png" alt="Rafu" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;"></div>
   </div>
 </div>
 
 <!--Cards-->
-<div class="row justify-content-around-mb-4" id="menu">
-<div class="col-md-4">
-    <div class="card">
+<div class="container mt-5" id="menu" style="background-color:rgb(66, 43, 77); color:aliceblue; padding: 20px;">
+    <div class="row justify-content-around mb-4">
+    <div class="col-md-4">
+     <div class="card">
       <img src="assets/ragu1.png" class="card-img-top" alt="Pasta Image">
-      <div class="card-title">Pasta</div>
+      <div class="card-body text-center">
+      <h5 class="card-title">Pasta</h5>
       <div class="card-text">A variety of delicious pastas.</p>
       </div>
     </div>
+    </div>
   </div>
   
-
-  <!-- Pizza Card -->
   <div class="col-md-4">
     <div class="card">
       <img src="assets/brita.png" class="card-img-top" alt="Pizza Image">
-      <div class="card-title">Pizza</div>
+      <div class="card-body text-center">
+      <h5 class="card-title">Pizza</h5>
       <div class="card-text">Hot and crispy pizzas with various toppings.</p>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- Desserts Card -->
   <div class="col-md-4">
     <div class="card">
       <img src="assets/mustikkapii.jpeg" class="card-img-top" alt="Dessert Image">
-      <div class="card-title">Desserts</div>
+      <div class="card-body text-center">
+      <h5 class="card-title">Desserts</h5>
       <div class="card-text">Sweet and savory desserts to end your meal.</p>
       </div>
+    </div>
     </div>
   </div>
 </div>
