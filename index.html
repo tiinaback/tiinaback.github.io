@@ -25,28 +25,76 @@
           <li class="nav-item">
             <a class="nav-link" href="#ravintola" style="color:aliceblue">Ravintola</a>
           </li>
+          
+          <!-- Dropdown with Accordions -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#menu" style="color:aliceblue" role="button" data-bs-toggle="dropdown">Menu</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" style="color:aliceblue">Lounas</a></li>
-              <li><a class="dropdown-item" href="#" style="color:aliceblue">A la Carte</a></li>
-              <li><a class="dropdown-item" href="#" style="color:aliceblue">Juomat</a></li>
+            <ul class="dropdown-menu" style="background-color:rgb(66, 43, 77); color:aliceblue;">
+              <li>
+                <div class="accordion" id="menuAccordion">
+                  
+                  <!-- Lounas Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingLounas">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLounas" aria-expanded="true" aria-controls="collapseLounas">
+                        Lounas
+                      </button>
+                    </h2>
+                    <div id="collapseLounas" class="accordion-collapse collapse show" aria-labelledby="headingLounas" data-bs-parent="#menuAccordion">
+                      <div class="accordion-body">
+                        <!-- Content for Lounas -->
+                        Päivän keitto 11,60 €
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- A La Carte Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingAlacarte">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlacarte" aria-expanded="false" aria-controls="collapseAlacarte">
+                        A la Carte
+                      </button>
+                    </h2>
+                    <div id="collapseAlacarte" class="accordion-collapse collapse" aria-labelledby="headingAlacarte" data-bs-parent="#menuAccordion">
+                      <div class="accordion-body">
+                        <!-- Content for A la Carte -->
+                        Pasta Ragu 18,50 €
+                        Nuudeliannos 16,60 €
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Juomat Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingJuomat">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJuomat" aria-expanded="false" aria-controls="collapseJuomat">
+                        Juomat
+                      </button>
+                    </h2>
+                    <div id="collapseJuomat" class="accordion-collapse collapse" aria-labelledby="headingJuomat" data-bs-parent="#menuAccordion">
+                      <div class="accordion-body">
+                        <!-- Content for Juomat -->
+                        Coca-cola 3,50 €
+                        Kahvi 2,50 €
+                        Vesi 1,00 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:aliceblue">Ota yhteyttä</a>
+            <a class="nav-link" href="#yhteystiedot" style="color:aliceblue">Ota yhteyttä</a>
           </li>  
-
         </ul>
       </div>
     </div>
-</nav>
+  </nav>
 
-  
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-    <!-- Indicators/dots -->
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -54,7 +102,6 @@
       <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
     </div>
     
-    <!-- The slideshow/carousel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets/brita.png" alt="Brita" class="d-block" style="width:100%">
@@ -85,7 +132,7 @@
         </div>  
       </div>
     </div>
-    
+
     <!-- Left and right controls/icons -->
     <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -95,51 +142,125 @@
     </button>
   </div>
 
-  <!--Grid-->
+  <!-- Grid -->
   <div class="container mt-5" id="ravintola" padding-top="70px" style="background-color:rgb(66, 43, 77); color:aliceblue">
-  <div class="row">
-    <div class="col-md-4"><img src="assets/nuudeli.png" alt="Nuudeli" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;" ></div>
-    <div class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center" ><h3>Tiinan keittiössä</h3><p>Tämmönen rafla vaan</p><p>Auki:</p><p>su-to 10:30-20:00</p><p>pe-la 10:30-22:00</p></div>
-    <div class="col-md-4"><img src="assets/ragu1.png" alt="Rafu" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;"></div>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/nuudeli.png" alt="Nuudeli" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;">
+      </div>
+      <div class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center">
+        <h3>Tiinan keittiössä</h3>
+        <p>Tämmönen rafla vaan</p>
+        <p>Avoinna:</p>
+        <p>ti-to 11:00-20:00</p>
+        <p>pe-la 11:00-23:30</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/ragu1.png" alt="Ragu" class="d-block" style="width:100%; max-width:500px; border-radius:30% 0% 30% 0%;">
+      </div>
+    </div>
   </div>
-</div>
 
-<!--Cards-->
-<div class="container mt-5" id="menu" style="background-color:rgb(66, 43, 77); color:aliceblue; padding: 20px;">
+  <!-- Cards -->
+  <div class="container mt-5" id="menu" style="background-color:rgb(66, 43, 77); color:aliceblue; padding: 20px;">
     <div class="row justify-content-around mb-4">
-    <div class="col-md-4">
-     <div class="card">
-      <img src="assets/ragu1.png" class="card-img-top" alt="Pasta Image">
-      <div class="card-body text-center">
-      <h5 class="card-title">Pasta</h5>
-      <div class="card-text">A variety of delicious pastas.</p>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/ragu1.png" class="card-img-top" alt="Pasta Image">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pasta</h5>
+            <div class="card-text">Herkullisia pasta-annoksia.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card">
-      <img src="assets/brita.png" class="card-img-top" alt="Pizza Image">
-      <div class="card-body text-center">
-      <h5 class="card-title">Pizza</h5>
-      <div class="card-text">Hot and crispy pizzas with various toppings.</p>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/brita.png" class="card-img-top" alt="Pizza Image">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pizza</h5>
+            <div class="card-text">Maistuvia ja rapeita pizzoja usealla täytevaihtoehdolla.</div>
+          </div>
+        </div>
       </div>
-    </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/mustikkapii.jpeg" class="card-img-top" alt="Dessert Image">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jälkkärit</h5>
+            <div class="card-text">Suut makiaksi aterian päätteeksi.</div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 
-  <div class="col-md-4">
-    <div class="card">
-      <img src="assets/mustikkapii.jpeg" class="card-img-top" alt="Dessert Image">
-      <div class="card-body text-center">
-      <h5 class="card-title">Desserts</h5>
-      <div class="card-text">Sweet and savory desserts to end your meal.</p>
-      </div>
-    </div>
-    </div>
+  <!--Table for Yhteystiedot-->
+  <div class="container mt-3" id="yhteystiedot">
+    <h2>Yhteystiedot</h2>  
+    <div class="table-responsive">        
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nimi</th>
+          <th>Tehtävä</th>
+          <th>Sähköposti</th>
+          <th>Puhelin</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+          <th>Esimerkki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tiina Työntekijä</td>
+          <td>Ravintolapäällikkö</td>
+          <td>tiina@tiinankeittiossa.fi</td>
+          <td>0501234567</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+          <td>Joo</td>
+        </tr>
+        <tr>
+          <td>Essi Esimerkki</td>
+          <td>Hovimestari</td>
+          <td>essi@tiinankeittiossa.fi</td>
+          <td>0412345678</td>
+        </tr>
+        <tr>
+          <td>Vesa Vastaava</td>
+          <td>Salivastaava</td>
+          <td>vesa@tiinankeittiossa.fi</td>
+          <td>0502345678</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+
+<!--Extra Bootstrap feature-->
+<div class="d-flex justify-content-center mt-4">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='#'" style="background-color: rgb(66, 43, 77); border-color: rgb(66, 43, 77); color: aliceblue;">
+        Takaisin ylös
+    </button>
+</div>
+
 </body>
 </html>
-
