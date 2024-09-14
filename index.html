@@ -93,6 +93,16 @@
     </div>
   </nav>
 
+  <script>
+    // Prevent dropdown from closing when clicking inside accordion
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    });
+  </script>
+  
+
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
